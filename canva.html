@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walkthrough 360 — Bavaria</title>
+  <meta property="og:title" content="Walkthrough 360 — Bavaria" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="Render/BAVARIA/S01_Portal_360_8K.png" />
+  <style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
+    .start-screen { position: fixed; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center; background: linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.48)), url("Render/BAVARIA/S01_Portal_360_8K.png") center / cover no-repeat; cursor: pointer; font-family: Arial, Helvetica, sans-serif; color: #fff; text-align: center; }
+    .start-card { padding: 28px 36px; border: 2px solid rgba(255,255,255,.85); border-radius: 18px; background: rgba(0,0,0,.42); box-shadow: 0 20px 50px rgba(0,0,0,.45); backdrop-filter: blur(6px); }
+    .start-card h1 { margin: 0 0 10px; font-size: clamp(24px, 4vw, 46px); line-height: 1.1; }
+    .start-card p { margin: 0; font-size: clamp(15px, 2vw, 22px); opacity: .9; }
+    iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: #000; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <iframe id="walkthroughFrame" title="Walkthrough 360 Bavaria" data-src="index.html" allowfullscreen="true"></iframe>
+  <div class="start-screen" id="startScreen" role="button" aria-label="Iniciar recorrido 360" tabindex="0">
+    <div class="start-card"><h1>Walkthrough 360</h1><p>Haz clic para iniciar</p></div>
+  </div>
+  <script>
+    const startScreen = document.getElementById('startScreen');
+    const frame = document.getElementById('walkthroughFrame');
+    function startWalkthrough() { if (!frame.src) frame.src = frame.dataset.src; startScreen.classList.add('hidden'); }
+    startScreen.addEventListener('click', startWalkthrough);
+    startScreen.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); startWalkthrough(); } });
+  </script>
+</body>
+</html>

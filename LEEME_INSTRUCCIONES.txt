@@ -1,0 +1,10 @@
+﻿INSTRUCCIONES WALKTHROUGH 360 — BAVARIA
+
+1. Para abrir localmente, ejecuta INICIAR_SERVIDOR_LOCAL.bat.
+2. Se abrirá http://localhost:8000/index.html en el navegador.
+3. Si no abre, entra manualmente a la carpeta y ejecuta: py -m http.server 8000
+4. Si py no funciona, usa: python -m http.server 8000
+5. No mover index.html, pannellum/ ni Render/.
+6. No cambiar nombres de archivos dentro de Render/BAVARIA/.
+7. Para pantalla completa usa el botón Pantalla completa.
+8. Para Canva o contenedores externos usa canva.html.

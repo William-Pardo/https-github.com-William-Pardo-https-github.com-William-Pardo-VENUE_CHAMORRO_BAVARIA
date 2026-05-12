@@ -15,6 +15,8 @@
     button:hover { background: rgba(255,255,255,.28); }
     .help { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 10; max-width: calc(100% - 48px); padding: 13px 22px; border-radius: 999px; color: #fff; background: rgba(0,0,0,.45); font-size: 17px; font-weight: 700; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,.25); backdrop-filter: blur(6px); }
     @media (max-width: 720px) { .topbar { padding: 10px 12px; } .title { font-size: 17px; } button { padding: 9px 12px; font-size: 13px; } .help { font-size: 14px; bottom: 14px; } }
+    .pnlm-hotspot-base { transform: scale(1.25); }
+    .pnlm-tooltip span { font-size: 15px; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -54,8 +56,8 @@
         s03_photo_opportunities: {
           title: 'S03 Photo Opportunities', type: 'equirectangular', panorama: 'Render/BAVARIA/S03_Photo_Opportunities_360_8K.png', yaw: 0, hfov: 100, autoLoad: true,
           hotSpots: [
-            { pitch: -4, yaw: 0, type: 'scene', text: 'Plaza Central', sceneId: 's10_plaza_central' },
-            { pitch: -4, yaw: 180, type: 'scene', text: 'Volver al Túnel', sceneId: 's02_tunel' }
+            { pitch: -8, yaw: 25, type: 'scene', text: 'Avanzar a Plaza Central', sceneId: 's10_plaza_central' },
+            { pitch: -8, yaw: -165, type: 'scene', text: 'Volver al Túnel', sceneId: 's02_tunel' }
           ]
         },
         s10_plaza_central: {
@@ -113,3 +115,4 @@
   </script>
 </body>
 </html>
+
